@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <title>የእኔ ጥቁር ሰማያዊ ካልኩሌተር</title>
     <style>
-        /* CSS (ሲ.ኤስ.ኤስ) - የካልኩሌተሩ ውበት እና ዲዛይን */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #e3e8f0; /* ከጀርባ ያለው ቀለም */
+            background-color: #e3e8f0; 
             font-family: Arial, sans-serif;
             margin: 0;
         }
         .calculator {
-            background-color: #0a192f; /* 🚀 የካልኩሌተሩ አካል ወደ ጥቁር ሰማያዊ ተቀይሯል */
+            background-color: #0a192f; 
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
-            width:400px;
+            /* 🚀 ካልኩሌተሩ ሰፋ እንዲል የተስተካከለ */
+            width: 90%; 
+            max-width: 400px;
         }
         .display {
             width: 100%;
-            height: 90px;
-            background-color: #e0f7fa; /* ፈዛዛ ሰማያዊ ስክሪን */
+            /* 🚀 የስክሪኑ ቁመት እና የቁጥር መጠን ያደገበት */
+            height: 80px; 
+            font-size: 40px; 
+            background-color: #e0f7fa; 
             text-align: right;
-            font-size: 30px;
             margin-bottom: 15px;
-            padding: 20px;
+            padding: 10px;
             box-sizing: border-box;
             border-radius: 10px;
             border: none;
@@ -41,8 +43,9 @@
             gap: 10px;
         }
         button {
-            padding: 20px;
-            font-size: 26px;
+            /* 🚀 አዝራሮቹ ሰፋ እንዲሉ የተስተካከለ */
+            padding: 20px; 
+            font-size: 26px; 
             background-color: #f1f5f9;
             border: none;
             border-radius: 8px;
@@ -51,19 +54,19 @@
             color: #333;
         }
         button:active {
-            background-color: #cbd5e1; /* ሲነካ ቀለሙ እንዲቀየር */
+            background-color: #cbd5e1;
         }
         button.operator {
-            background-color: #007bff; /* 🚀 የሂሳብ ምልክቶች ደመቅ ያለ ሰማያዊ ሆነዋል */
+            background-color: #007bff; 
             color: white;
         }
         button.operator:active {
             background-color: #0056b3;
         }
         button.clear {
-            background-color: #ef4444; /* ቀይ የማጥፊያ በተን */
+            background-color: #ef4444; 
             color: white;
-            grid-column: span 4; /* አራት ቦታ እንዲይዝ (ሰፋ እንዲል) */
+            grid-column: span 4; 
         }
         button.clear:active {
             background-color: #dc2626;
@@ -122,3 +125,4 @@
     </script>
 </body>
 </html>
+            
