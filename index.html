@@ -18,13 +18,11 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
-            /* 🚀 ካልኩሌተሩ ሰፋ እንዲል የተስተካከለ */
             width: 90%; 
             max-width: 400px;
         }
         .display {
             width: 100%;
-            /* 🚀 የስክሪኑ ቁመት እና የቁጥር መጠን ያደገበት */
             height: 80px; 
             font-size: 40px; 
             background-color: #e0f7fa; 
@@ -43,7 +41,6 @@
             gap: 10px;
         }
         button {
-            /* 🚀 አዝራሮቹ ሰፋ እንዲሉ የተስተካከለ */
             padding: 20px; 
             font-size: 26px; 
             background-color: #f1f5f9;
@@ -63,10 +60,19 @@
         button.operator:active {
             background-color: #0056b3;
         }
+        /* 🚀 ወደ ኋላ መመለሻው በተን (ብርቱካናማ ቀለም) */
+        button.delete {
+            background-color: #f59e0b; 
+            color: white;
+            grid-column: span 2; /* ሁለት ቦታ እንዲይዝ */
+        }
+        button.delete:active {
+            background-color: #d97706;
+        }
         button.clear {
             background-color: #ef4444; 
             color: white;
-            grid-column: span 4; 
+            grid-column: span 2; /* ሁለት ቦታ እንዲይዝ */
         }
         button.clear:active {
             background-color: #dc2626;
@@ -99,7 +105,8 @@
             <button class="operator" onclick="calculate()">=</button>
             <button class="operator" onclick="appendValue('+')">+</button>
 
-            <button class="clear" onclick="clearDisplay()">አጥፋ (Clear)</button>
+            <button class="delete" onclick="backspace()">⌫ ሰርዝ</button>
+            <button class="clear" onclick="clearDisplay()">C አጥፋ</button>
         </div>
     </div>
 
@@ -114,6 +121,11 @@
             display.value = '';
         }
 
+        // 🚀 ወደ ኋላ የሚመልሰው አዲሱ ፎርሙላ
+        function backspace() {
+            display.value = display.value.slice(0, -1);
+        }
+
         function calculate() {
             try {
                 let result = eval(display.value.replace('×', '*').replace('÷', '/'));
@@ -125,4 +137,3 @@
     </script>
 </body>
 </html>
-            
